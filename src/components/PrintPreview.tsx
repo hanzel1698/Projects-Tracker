@@ -161,7 +161,7 @@ export function PrintPreview({ projects, config }: PrintPreviewProps) {
       case 'updatedAt':
         return formatDate(project.updatedAt);
       case 'projectHistory':
-        return null; // Handle separately
+        return ''; // Handle separately with JSX
       default:
         return '-';
     }
