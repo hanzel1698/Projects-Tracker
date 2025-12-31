@@ -293,6 +293,11 @@ export function useProjects() {
     );
   };
 
+  const replaceAllProjects = (newProjects: Project[]) => {
+    setProjects(newProjects);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(newProjects));
+  };
+
   return {
     projects,
     loading,
@@ -300,5 +305,6 @@ export function useProjects() {
     updateProject,
     deleteProject,
     updateProjectHistory,
+    replaceAllProjects,
   };
 }
